@@ -13,7 +13,11 @@ connectDB();
 
 app.use(compression());
 
-const allowedOrigins = ['http://localhost:5173']
+// const allowedOrigins = ['http://localhost:5173']
+const allowedOrigins = [
+    'http://localhost:5173',                     // local dev
+    'https://auth-client-gamma.vercel.app'      // deployed frontend on Vercel
+  ];
 
 app.use (express.json());
 app.use(cookieParser());
